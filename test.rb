@@ -10,4 +10,7 @@ require "Seedr"
   puts "Email: #{Seedr.email}"
   puts "Address line 1: #{Seedr.address_line_1}"
   puts "Address line 2: #{Seedr.address_line_2}"
+  puts "random integer: #{Seedr.random_integer}"
+  puts "random character: #{Seedr.random_string}"
+  puts "phone number: #{Seedr.phone_number}"
 end

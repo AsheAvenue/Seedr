@@ -3,7 +3,13 @@ require "Seedr/version"
 module Seedr
   
   def self.random_string(length=1)
-    
+    range = [*'a'..'z', *'A'..'Z']
+    Array.new(length){range.sample}.join
+  end
+  
+  def self.random_integer(length=1)
+    range = [*0..9]
+    Array.new(length){range.sample}.join
   end
   
   def self.first_name
@@ -15,7 +21,8 @@ module Seedr
   end
   
   def self.middle_initial
-    Array('A'..'Z').sample
+    range = [*'A'..'Z']
+    range.sample
   end
   
   def self.username
@@ -24,6 +31,10 @@ module Seedr
   
   def self.full_name
     "#{self.first_name} #{self.middle_initial}. #{self.last_name}"
+  end
+  
+  def self.phone_number(seperator='')
+    "#{self.random_integer(3)}#{seperator}#{self.random_integer(3)}#{seperator}#{self.random_integer(4)}"
   end
   
   def self.company_name
