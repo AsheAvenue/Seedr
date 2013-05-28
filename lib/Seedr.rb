@@ -33,8 +33,8 @@ module Seedr
     "#{self.first_name} #{self.middle_initial}. #{self.last_name}"
   end
   
-  def self.phone_number(seperator='')
-    "#{self.random_integer(3)}#{seperator}#{self.random_integer(3)}#{seperator}#{self.random_integer(4)}"
+  def self.phone_number(separator='')
+    "#{self.random_integer(3)}#{separator}#{self.random_integer(3)}#{separator}#{self.random_integer(4)}"
   end
   
   def self.company_name
@@ -69,5 +69,18 @@ module Seedr
   
   def self.state
     ['CA', 'NC', 'OK', 'NY', 'UT', 'MT', 'OR', 'AZ', 'SC', 'KY', 'WV', 'VA', 'ME', 'FL'].sample
+  end
+  
+  def self.province
+    ['AB', 'SK', 'BC', 'NB', 'ON', 'QC', 'NS'].sample
+  end
+  
+  def self.country(abbreviation=FALSE)
+    if abbreviation
+      ['US', 'MX', 'CA', 'FR', 'ES', 'JP', 'SG', 'NM'].sample
+    else
+      ['United States', 'Mexico', 'Canada', 'France', 'Spain', 'Japan', 'Singapore', 'Namibia'].sample
+    end
+  end
   
 end
