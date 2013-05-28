@@ -2,6 +2,10 @@ require "Seedr/version"
 
 module Seedr
   
+  def self.random_string(length=1)
+    
+  end
+  
   def self.first_name
     first_names = ['Joe','Rob','Tim','John','Matt','Gob','Ricky','Bubbles','Walt','Sally','Natalie','Jane','Oscar','Lupe','Benjamin','Lindsay']
     first_names.sample
