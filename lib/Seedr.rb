@@ -17,7 +17,7 @@ module Seedr
   end
   
   def self.middle_initial
-    middle_initials = ['A'..'Z']
+    middle_initials = Array('A'..'Z')
     middle_initials.sample
   end
   
