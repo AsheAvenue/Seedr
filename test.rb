@@ -12,5 +12,8 @@ require "Seedr"
   puts "Address line 2: #{Seedr.address_line_2}"
   puts "random integer: #{Seedr.random_integer}"
   puts "random character: #{Seedr.random_string}"
+  puts "random integer length 5: #{Seedr.random_integer(5)}"
+  puts "random string length 5: #{Seedr.random_string(5)}" 
   puts "phone number: #{Seedr.phone_number}"
+  puts "phone with seperator: #{Seedr.phone_number('-')}"
 end
