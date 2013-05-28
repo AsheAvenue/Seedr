@@ -1,8 +1,11 @@
 require "Seedr"
 
-3.times do
-  puts "Random integer(s): #{Seedr.random_integer}"
-  puts "Random character(s): #{Seedr.random_string}"
+2.times do
+  puts ""
+  puts "Random integer: #{Seedr.random_integer}"
+  puts "Random character: #{Seedr.random_string}"
+  puts "Random integers: #{Seedr.random_integer(10)}"
+  puts "Random characters: #{Seedr.random_string(10)}"
   puts "First name: #{Seedr.first_name}"
   puts "Last name: #{Seedr.last_name}"
   puts "Middle inital: #{Seedr.middle_initial}"
@@ -18,4 +21,7 @@ require "Seedr"
   puts "Country: #{Seedr.country}"
   puts "Country (abbreviation): #{Seedr.country(true)}"
   puts "Phone Number: #{Seedr.phone_number}"
+  puts "Phone Number (separator): #{Seedr.phone_number('-')}"
 end
+
+puts ""
