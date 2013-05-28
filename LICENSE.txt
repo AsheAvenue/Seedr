@@ -1,4 +1,4 @@
-Copyright (c) 2013 Tim Boisvert
+Copyright (c) 2013 Ashe Avenue. Created by Tim Boisvert and Rob Farrell
 
 MIT License
 
