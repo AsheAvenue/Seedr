@@ -53,7 +53,10 @@ module Seedr
   end
   
   def self.city 
-    
+    ['Lincoln', 'Orange', 'Ridgecrest', 'Springville', 'Laserville', 'Oak Ridge', 'Nashville', 'Los Gatos', 'Shreveport'].sample
   end
+  
+  def self.state
+    ['CA', 'NC', 'OK', 'NY', 'UT', 'MT', 'OR', 'AZ', 'SC', 'KY', 'WV', 'VA', 'ME', 'FL'].sample
   
 end
