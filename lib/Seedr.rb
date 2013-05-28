@@ -39,10 +39,22 @@ module Seedr
   end
   
   def self.email
-    username = ['bob', 'horace', 'jimmy', 'info', 'noreply', 'stuff', 'juan', 'daisuke', 'veronicgit a', 'marge', 'inquiries']
+    username = ['bob', 'horace', 'jimmy', 'info', 'noreply', 'stuff', 'juan', 'daisuke', 'veronica', 'marge', 'inquiries']
     host = ['gmail', 'hotmail', 'yahoo', 'nytimes', 'runners', 'hotdating', 'cnn', 'maryjanetimes', 'nyc', 'navy']
     tld = ['com', 'net', 'io', 'gov', 'mil', 'co.uk', 'es']
     "#{username.sample}@#{host.sample}.#{tld.sample}"
+  end
+  
+  def self.address_line_1
+    direction = ['N.', 'S.', 'E.', 'W.', 'North', 'South', 'East', 'West']
+    street = ['First', 'Third', 'Franklin', 'Lakeland', 'Hillsborough', 'Pennsylvania', 'Cardigan', 'High', 'China Lake', 'Columbia']
+    type = ['St.', 'Ave.', 'Blvd.', 'Rd.', 'Way', 'Court']
+    "#{Random.rand(1000)} #{direction.sample} #{street.sample} #{type.sample}"
+  end
+  
+  def self.address_line_2
+    s = ["Apt. #{Random.rand(10) + 1}#{Array('A'..'G').sample}", "Suite #{Random.rand(90) + 1}", "#{Random.rand(10) + 4}th Floor"]
+    s.sample
   end
   
 end
