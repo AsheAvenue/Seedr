@@ -13,13 +13,11 @@ module Seedr
   end
   
   def self.first_name
-    first_names = ['Joe','Rob','Tim','John','Matt','Gob','Ricky','Bubbles','Walt','Sally','Natalie','Jane','Oscar','Lupe','Benjamin','Lindsay']
-    first_names.sample
+    ['Joe','Rob','Tim','John','Matt','Gob','Ricky','Bubbles','Walt','Sally','Natalie','Jane','Oscar','Lupe','Benjamin','Lindsay'].sample
   end
   
   def self.last_name
-    last_names = ['Bluth','Morgan','Pinkman','Skywalker','Lahee','Griswald','Farakahn','Greenpoint','Seinfeld','Simpson','Briggs','Baxter']
-    last_names.sample
+    ['Bluth','Morgan','Pinkman','Skywalker','Lahee','Griswald','Farakahn','Greenpoint','Seinfeld','Simpson','Briggs','Baxter'].sample
   end
   
   def self.middle_initial
@@ -28,8 +26,7 @@ module Seedr
   end
   
   def self.username
-    user_names = ['bewbewbew002','murphdawg23','captain0bv3us','username123','jesuslovesme','grannyPants419','art_vandelay','theRealMacafee','iLoveScreech1492','thugLife187']
-    user_names.sample
+    ['bewbewbew002','murphdawg23','captain0bv3us','username123','jesuslovesme','grannyPants419','art_vandelay','theRealMacafee','iLoveScreech1492','thugLife187'].sample
   end
   
   def self.full_name
@@ -49,10 +46,25 @@ module Seedr
   end
   
   def self.email
-    username = ['bob', 'horace', 'jimmy', 'info', 'noreply', 'stuff', 'juan', 'daisuke', 'veronicgit a', 'marge', 'inquiries']
+    username = ['bob', 'horace', 'jimmy', 'info', 'noreply', 'stuff', 'juan', 'daisuke', 'veronica', 'marge', 'inquiries']
     host = ['gmail', 'hotmail', 'yahoo', 'nytimes', 'runners', 'hotdating', 'cnn', 'maryjanetimes', 'nyc', 'navy']
     tld = ['com', 'net', 'io', 'gov', 'mil', 'co.uk', 'es']
     "#{username.sample}@#{host.sample}.#{tld.sample}"
+  end
+  
+  def self.address_line_1
+    direction = ['N.', 'S.', 'E.', 'W.', 'North', 'South', 'East', 'West']
+    street = ['First', 'Third', 'Franklin', 'Lakeland', 'Hillsborough', 'Pennsylvania', 'Cardigan', 'High', 'China Lake', 'Columbia']
+    type = ['St.', 'Ave.', 'Blvd.', 'Rd.', 'Way', 'Court']
+    "#{Random.rand(1000)} #{direction.sample} #{street.sample} #{type.sample}"
+  end
+  
+  def self.address_line_2
+    ["Apt. #{Random.rand(10) + 1}#{Array('A'..'G').sample}", "Suite #{Random.rand(90) + 1}", "#{Random.rand(10) + 4}th Floor"].sample
+  end
+  
+  def self.city 
+    
   end
   
 end
