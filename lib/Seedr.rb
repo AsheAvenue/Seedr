@@ -22,4 +22,10 @@ module Seedr
     "#{word1.sample} #{word2.sample} #{word3.sample} #{word4.sample}"
   end
   
+  def self.email
+    username = ['bob', 'horace', 'jimmy', 'info', 'noreply', 'stuff', 'juan', 'daisuke', 'veronica', 'marge', 'inquiries']
+    host = ['gmail', 'hotmail', 'yahoo', 'nytimes', 'runners', 'hotdating', 'cnn', 'maryjanetimes', 'nyc', 'navy']
+    tld = ['com', 'net', 'io', 'gov', 'mil', 'co.uk', 'es']
+    "#{username.sample}@#{host.sample}.#{tld}"
+  end
 end
