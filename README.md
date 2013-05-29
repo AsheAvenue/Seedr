@@ -41,6 +41,7 @@ Seedr can naturally be used outside of a Rails context. Example:
 
     Seedr.random_string(length=1)
     Seedr.random_integer(length=1)
+    Seedr.random_word
     
 ### Dates/Times
 
