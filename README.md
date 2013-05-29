@@ -72,6 +72,6 @@ Seedr can naturally be used outside of a Rails context. Example:
     
 ##Finally...
 
-© 2013 Ashe Avenue. Created by <a href="http://twitter.com/timboisvert">Tim Boisvert</a> and Rob Farrell.
+© 2013 <a href="http://www.asheavenue.com">Ashe Avenue</a>. Created by <a href="http://twitter.com/timboisvert">Tim Boisvert</a> and Rob Farrell.
 <br />
 Seedr is released under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.
