@@ -1,5 +1,6 @@
 require "Seedr/version"
 require "titleize"
+require 'time'
 
 module Seedr
   
@@ -15,6 +16,20 @@ module Seedr
     Array.new(length){range.sample}.join
   end
   
+  def self.random_word
+    ['sed', 'posuere', 'consectetur', 'est', 'at' 'lobortis', 'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing' 'elit', 'nullam', 'id', 'dolor', 'id', 'nibh', 'ultricies', 'vehicula', 'ut', 'id', 'elit', 'maecenas', 'sed', 'diam', 'eget', 'risus', 'varius', 'blandit', 'sit', 'amet', 'non', 'magna'].sample
+  end
+  
+  #DATES/TIMES
+  
+  def self.date(start=0.0,stop=Time.now)
+    Time.at(start + rand * (stop.to_f - start.to_f)).to_date
+  end
+  
+  def self.datetime(start=0.0,stop=Time.now)
+    Time.at(start + rand * (stop.to_f - start.to_f)).to_datetime
+  end
+  
   
   # PROFILE
   
@@ -27,12 +42,11 @@ module Seedr
   end
   
   def self.middle_initial
-    range = [*'A'..'Z']
-    range.sample
+    [*'A'..'Z'].sample
   end
   
   def self.username
-    ['bewbewbew002','murphdawg23','captain0bv3us','username123','jesuslovesme','grannyPants419','art_vandelay','theRealMacafee','iLoveScreech1492','thugLife187'].sample
+    ['bewbewbew002','nicCage80085','murphdawg23','captain0bv3us','username123','jesuslovesme','grannyPants419','art_vandelay','theRealMacafee','iLoveScreech1492','thugLife187'].sample
   end
   
   def self.full_name
