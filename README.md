@@ -1,3 +1,5 @@
+![Seedr](/img/logo.png)
+
 Seedr is a non-expansive, simple alternative to Forgery, Faker, FFaker, and the like. It aims to provide a single namespace with a limited set of options, focusing instead on the most basic of dummy data. 
 
 ## Installation
