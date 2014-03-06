@@ -1,4 +1,4 @@
-require "Seedr/version"
+#require "Seedr/version"
 require "titleize"
 require 'time'
 
@@ -18,6 +18,19 @@ module Seedr
   
   def self.random_word
     ['sed', 'posuere', 'consectetur', 'est', 'at' 'lobortis', 'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing' 'elit', 'nullam', 'id', 'dolor', 'id', 'nibh', 'ultricies', 'vehicula', 'ut', 'id', 'elit', 'maecenas', 'sed', 'diam', 'eget', 'risus', 'varius', 'blandit', 'sit', 'amet', 'non', 'magna'].sample
+  end
+  
+  def self.random_sentences
+    [
+      "This here's a story all about how my life got flipped, turned upside down.  Now I'd like to take a minute, just sit right there.  I'll tell you how I became the prince of a town called Bel Air.",
+      "How much wood could a woodchuck chuck if a woodchuck could Chuck Norris.",
+      "You smell that? Do you smell that? Napalm, son. Nothing else in the world smells like that. I love the smell of napalm in the morning.",
+      "You know the thing about a shark, he’s got lifeless eyes. Black eyes like a doll’s eyes. When he comes at ya, he doesn’t seem to be living until he bites ya and those black eyes roll over and white and then, ah, then you hear that terrible high-pitch screaming. The ocean turns red and despite all the pounding and hollering, they all come in and they rip you to pieces.",
+      "In the name of God, do your duty. In the name of God, believe Tom Robinson.",
+      "I am recognizing that the voices in my head are urging me to be myself and never follow someone else.  Opinions are like voices we all have a different kind, so just clean out all of your ears these are my views and you will find that we're revolutionizing with the kick and the snare.",
+      "The good thing about science is it's true, whether or not you believe in it.",
+      "Never trust a cat."
+    ].sample
   end
   
   #DATES/TIMES
@@ -53,11 +66,20 @@ module Seedr
     "#{self.first_name} #{self.middle_initial}. #{self.last_name}"
   end
   
+  def self.email_username
+    ['bob', 'horace', 'jimmy', 'info', 'noreply', 'stuff', 'juan', 'daisuke', 'veronica', 'marge', 'inquiries'].sample
+  end
+  
+  def self.hostname
+    ['gmail', 'hotmail', 'yahoo', 'nytimes', 'runners', 'hotdating', 'cnn', 'maryjanetimes', 'nyc', 'navy', 'asheavenue','seacaptaindate','geocities'].sample
+  end
+  
+  def self.tld
+    ['com', 'net', 'io', 'gov', 'mil', 'co.uk', 'es', 'biz','info','edu'].sample
+  end
+  
   def self.email
-    username = ['bob', 'horace', 'jimmy', 'info', 'noreply', 'stuff', 'juan', 'daisuke', 'veronica', 'marge', 'inquiries']
-    host = ['gmail', 'hotmail', 'yahoo', 'nytimes', 'runners', 'hotdating', 'cnn', 'maryjanetimes', 'nyc', 'navy']
-    tld = ['com', 'net', 'io', 'gov', 'mil', 'co.uk', 'es']
-    "#{username.sample}@#{host.sample}.#{tld.sample}"
+    "#{self.email_username}@#{self.hostname}.#{self.tld}"
   end
   
   def self.phone_number(separator='')
@@ -109,6 +131,14 @@ module Seedr
     else
       ['United States', 'Mexico', 'Canada', 'France', 'Spain', 'Japan', 'Singapore', 'Namibia'].sample
     end
+  end
+  
+  def self.image(width=FALSE,height=FALSE)
+    placeToggle = ['','c/','g/']
+    sizes = ['199','200','198','201','197']
+    width = sizes.sample unless width
+    height = sizes.sample unless height
+    "http://www.placecage.com/#{placeToggle.sample}#{width}/#{height}"
   end
   
   
