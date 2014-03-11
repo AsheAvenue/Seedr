@@ -1,13 +1,12 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'Seedr/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "Seedr"
-  gem.version       = Seedr::VERSION
+  gem.version       = "1.0.1"
   gem.authors       = ["Ashe Avenue -- Tim Boisvert and Rob Farrell"]
-  gem.email         = ["tboisvert@asheavenue.com"]
+  gem.email         = ["tboisvert@asheavenue.com", "rfarrell@asheavenue.com"]
   gem.description   = 'A friendly Rails seeding assistant'
   gem.summary       = 'A friendly Rails seeding assistant'
   gem.homepage      = 'http://github.com/AsheAvenue/Seedr'
