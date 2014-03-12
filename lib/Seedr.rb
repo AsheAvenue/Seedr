@@ -1,6 +1,7 @@
 #require "Seedr/version"
 require "titleize"
 require 'time'
+require 'seedr/seedrable.rb'
 
 module Seedr
   
